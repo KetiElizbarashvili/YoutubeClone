@@ -18,10 +18,11 @@ import { User } from "./src/models";
 function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
-
+  
+      // get user  from cognito
+ 
   useEffect(() => {
     const saveUserToDB = async () => {
-      // get user  from cognito
       const userInfo = await Auth.currentAuthenticatedUser();
 
       if (!userInfo) {
